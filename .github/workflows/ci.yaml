@@ -1,4 +1,8 @@
 name: ci
+
+permissions:
+  contents: write
+
 on:
     push:
         branches:
@@ -12,6 +16,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
+            - name: Set up Java
+              uses: actions/setup-java@v4
+              with:
+                distribution: temurin
+                java-version: '17'
             - uses: actions/setup-node@v4
             - uses: bahmutov/npm-install@v1
             - run: npm run build-keycloak-theme
@@ -39,6 +48,11 @@ jobs:
         if: needs.check_if_version_upgraded.outputs.is_upgraded_version == 'true'
         steps:
             - uses: actions/checkout@v4
+            - name: Set up Java
+              uses: actions/setup-java@v4
+              with:
+                distribution: temurin
+                java-version: '17'
             - uses: actions/setup-node@v4
             - uses: bahmutov/npm-install@v1
             - run: npm run build-keycloak-theme
@@ -50,6 +64,6 @@ jobs:
                   generate_release_notes: true
                   draft: false
                   prerelease: ${{ needs.check_if_version_upgraded.outputs.is_pre_release == 'true' }}
-                  files: dist_keycloak/keycloak-theme-*.jar
+                  files: build_keycloak/keycloak-theme-*.jar
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
