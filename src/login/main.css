@@ -32,7 +32,8 @@ body.kcBodyClass {
     border: 0;
 }
 
-.kcFormPasswordVisibilityButtonClass::after {
+.kcFormPasswordVisibilityButtonClass::after,
+.kcFormSocialAccountListButtonClass::after {
     border: 0;
     border-radius: 6px;
 }
