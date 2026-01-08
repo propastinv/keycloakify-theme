@@ -1,0 +1,49 @@
+.kcLoginClass {
+    padding-top: 150px;
+}
+
+body.kcBodyClass {
+    background: #1B1A28;
+    background: linear-gradient(125deg, rgba(27, 26, 40, 1) 0%, rgba(0, 38, 110, 1) 100%);
+
+}
+
+.kcFormCardClass {
+    background-color: #11101E;
+    color: white;
+    border-radius: 8px;
+}
+
+.kcButtonClass,
+.kcFormSocialAccountListButtonClass {
+    background-color: #0054F1;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+}
+
+.kcInputGroup {
+    background-color: transparent;
+    gap: 0.5rem;
+}
+
+.kcFormPasswordVisibilityButtonClass {
+    border-radius: 6px;
+    border: 0;
+}
+
+.kcFormPasswordVisibilityButtonClass::after {
+    border: 0;
+    border-radius: 6px;
+}
+
+.kcInputClass {
+    background-color: #1B1A28;
+    border: 1px solid #333245;
+    border-radius: 6px;
+    color: white;
+}
+
+#kc-info-wrapper {
+    background-color: #1B1A28;
+}
