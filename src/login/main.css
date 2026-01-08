@@ -19,6 +19,7 @@ body.kcBodyClass {
     border: none;
     border-radius: 2rem;
     font-size: 1rem;
+    height: 36px;
 }
 
 .kcInputGroup {
